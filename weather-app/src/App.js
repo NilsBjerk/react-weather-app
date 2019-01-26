@@ -7,8 +7,11 @@ const apiKey = "e742b6bf9ab4c7d277f4f9bef4bc924d";
 
 class App extends Component {
 
-  getWeather = async () => {
-    const apiCall = await fetch(`https://samples.openweathermap.org/data/2.5/weather?q=Kristiansand,nor&appid=${apiKey}`);
+  getWeather = async (e) => {
+    e.preventDefault();
+    const city = e.target.elements.city.value;
+    const country = e.target.elements.country.value;
+    const apiCall = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${apiKey}&units=metric`);
     const data = await apiCall.json();
     console.log(data);
   };
@@ -17,7 +20,7 @@ class App extends Component {
     return ( 
       <div>
         <Titles />
-        <Form />
+        <Form getWeather={this.getWeather} />
         <Weather />
       </div>
      );
