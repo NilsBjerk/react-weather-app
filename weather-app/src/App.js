@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import Titles from './components/titles';
 import Form from './components/form';
 import Weather from './components/weather';
+import reactApiKey from "./apiKey";
 
-const apiKey = "e742b6bf9ab4c7d277f4f9bef4bc924d";
+const apiKey = reactApiKey;
 
 class App extends Component {
 
