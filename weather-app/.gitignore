@@ -1,7 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 #ApiKey
-/weather-app./ApiKey.js
+/weather-app/src/apiKey.js
 
 # dependencies
 /node_modules
