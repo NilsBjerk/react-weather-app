@@ -4,7 +4,7 @@ import Form from './components/form';
 import Weather from './components/weather';
 import reactApiKey from "./apiKey";
 
-const apiKey = reactApiKey;
+const apiKey = reactApiKey; 
 
 class App extends Component {
 
